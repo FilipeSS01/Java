@@ -8,7 +8,7 @@ public class Conta {
     protected int cpf;
     protected int conta;
     protected double saldo;
-    DecimalFormat df = new DecimalFormat("# ###.00");
+    DecimalFormat df = new DecimalFormat("####.##");
 
     public Conta() {
         this.setPrimeiroNome("");

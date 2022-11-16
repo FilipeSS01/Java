@@ -1,9 +1,6 @@
 package Banco;
 
-import java.text.DecimalFormat;
-
 public class Poupanca extends Conta {
-    DecimalFormat df = new DecimalFormat("# ###.00");
 
     public Poupanca(String primeiroNome, String ultimoNome, int cpf, int conta, double saldo) {
         super(primeiroNome, ultimoNome, cpf, conta, saldo);
