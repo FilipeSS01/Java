@@ -43,6 +43,11 @@ public class Conta {
                 + df.format(this.getSaldo());
     }
 
+    public String toString() {
+        return super.toString() + "\n" + "Conta: " + this.getConta() + "\nTitular: " + this.getNome() + "\nSaldo: R$ "
+                + df.format(this.getSaldo());
+    }
+
     protected String getNome() {
         return this.getPrimeiroNome() + " " + this.getUltimoNome();
     }
