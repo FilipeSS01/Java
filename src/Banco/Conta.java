@@ -26,25 +26,25 @@ public class Conta {
         this.setSaldo(saldo);
     }
 
+    public String mes() {
+        return "Conta: " + this.getConta() + "\nTitular: " + this.getNome() + "\nCPF: " + this.getCpf() + "\nSaldo: R$ "
+                + df.format(this.getSaldo());
+    }
+
     public String saque(double value) {
         this.setSaldo(this.getSaldo() - value);
-        return "Conta: " + this.getConta() + "\nTitular: " + this.getNome() + "\nValor retirado: R$ " + value
+        return "Conta: " + this.getConta() + "\nTitular: " + this.getNome() + "\nCPF: " + this.getCpf() + "\nValor retirado: R$ " + value
                 + "\nSaldo: R$ " + df.format(this.getSaldo());
     }
 
     public String deposito(double value) {
         this.setSaldo(this.getSaldo() + value);
-        return "Conta: " + this.getConta() + "\nTitular: " + this.getNome() + "\nValor depositado: R$ " + value
+        return "Conta: " + this.getConta() + "\nTitular: " + this.getNome() + "\nCPF: " + this.getCpf() + "\nValor depositado: R$ " + value
                 + "\nSaldo: R$ " + df.format(this.getSaldo());
     }
 
     public String saldo() {
-        return "Conta: " + this.getConta() + "\nTitular: " + this.getNome() + "\nSaldo: R$ "
-                + df.format(this.getSaldo());
-    }
-
-    public String toString() {
-        return super.toString() + "\n" + "Conta: " + this.getConta() + "\nTitular: " + this.getNome() + "\nSaldo: R$ "
+        return "Conta: " + this.getConta() + "\nTitular: " + this.getNome() + "\nCPF: " + this.getCpf() + "\nSaldo: R$ "
                 + df.format(this.getSaldo());
     }
 
@@ -53,7 +53,7 @@ public class Conta {
     }
 
     protected String getPrimeiroNome() {
-        return primeiroNome;
+        return this.primeiroNome;
     }
 
     protected void setPrimeiroNome(String primeiroNome) {
@@ -61,7 +61,7 @@ public class Conta {
     }
 
     protected String getUltimoNome() {
-        return ultimoNome;
+        return this.ultimoNome;
     }
 
     protected void setUltimoNome(String ultimoNome) {
@@ -69,7 +69,7 @@ public class Conta {
     }
 
     protected int getCpf() {
-        return cpf;
+        return this.cpf;
     }
 
     protected void setCpf(int cpf) {
@@ -77,7 +77,7 @@ public class Conta {
     }
 
     protected int getConta() {
-        return conta;
+        return this.conta;
     }
 
     protected void setConta(int conta) {
@@ -85,7 +85,7 @@ public class Conta {
     }
 
     protected double getSaldo() {
-        return saldo;
+        return this.saldo;
     }
 
     protected void setSaldo(double saldo) {
